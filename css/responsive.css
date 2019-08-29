@@ -2,7 +2,7 @@
 /* tablets */
 /* only small tablets */
 @media (min-width: 768px) and (max-width: 991px) {
-  #hero-area .contents h1 {
+  #hero-section .contents h1 {
     font-size: 28px;
   }
   .item-boxes h4 {
@@ -11,7 +11,7 @@
   #features .show-box img {
     display: none;
   }
-  .pricing-table .pricing-details ul li {
+  .values-table .values-details ul li {
     font-size: 12px;
   }
   .counters .facts-item .fact-count h4 {
@@ -37,10 +37,10 @@
   .section-header .section-title {
     font-size: 20px;
   }
-  #hero-area .contents {
+  #hero-section .contents {
     padding: 100px 0 80px;
   }
-  #hero-area .contents h1 {
+  #hero-section .contents h1 {
     font-size: 18px;
     line-height: 30px;
   }
@@ -60,7 +60,7 @@
   .video-promo .video-promo-content h2 {
     font-size: 22px;
   }
-  .pricing-table {
+  .values-table {
     margin-bottom: 15px;
   }
   .counters .facts-item {
