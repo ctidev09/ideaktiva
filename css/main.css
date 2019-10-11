@@ -5,8 +5,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   background: #fff;
   overflow-x: hidden;
 }
@@ -16,9 +16,17 @@ html {
 }
 
 p {
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 36px;
 }
+.card-text{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 38px;
+}
+
 
 a:hover, a:focus {
   color: #FF3939;
@@ -34,6 +42,12 @@ a {
 h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -58,7 +72,7 @@ a:not([href]):not([tabindex]) {
 }
 
 a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: #FF3939;
+  color: rgb(255, 255, 255);
 }
 
 /* ==========================================================================
@@ -118,6 +132,11 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   transition: all 0.2s linear;
   display: inline-block;
 }
+.card-image{
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
 
 .btn:focus,
 .btn:active {
@@ -127,21 +146,22 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 .btn-common {
-  border: 1px solid #FF3939;
-  background: #FF3939;
+  background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
   position: relative;
   color: #fff;
   z-index: 1;
+  height: 50px;
+  text-align: center;
   border-radius: 30px;
+  
 }
 
 .btn-common:hover {
   color: #fff;
-  background: #FF3939;
-  border-color: #FF3939;
-  transition: all .50s ease-in-out;
-  -moz-transition: all .50s ease-in-out;
-  -webkit-transition: all .50s ease-in-out;
+  background-image: linear-gradient(to right, #b31217 10%, #e52d27 100%,  #b31217 10%); 
+  box-shadow: 1px 1px 20px 1px rgba(77, 77, 77, 0.3);
+
+ 
 }
 
 .btn-border {
@@ -402,10 +422,12 @@ button:focus {
 }
 
 #hero-section .contents p {
-  font-size: 20px;
+  font-size: 40px;
+  line-height : 48px;
   color: #D41014;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.0px;
   font-weight: bold;
+  padding: 30 0px
 }
 
 #hero-section .contents .btn {
@@ -480,6 +502,7 @@ button:focus {
   padding: 0 22px;
   margin-top: 20px;
   margin-bottom: 20px;
+  display: block;
   line-height: 40px;
   border-radius: 30px;
   background: transparent;
@@ -511,10 +534,31 @@ button:focus {
   background: #FF3939;
 }
 
+@media screen and (max-width: 1053px){
+.mobile-menu {
+    display: contents;
+
+  }
+ 
+}
+
 /* only small tablets */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 2101px) {
   #nav-main li a.nav-link {
     padding-top: 18px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    color: #fff;
+    padding: 0 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 40px;
+    border-radius: 30px;
+    background: transparent;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -525,10 +569,15 @@ button:focus {
 .mobile-menu {
   display: none;
 }
-
+.slicknav_btn {
+    
+    display: block;
+    
+}
 .slicknav_menu {
   display: none;
 }
+
 
 @media screen and (max-width: 768px) {
   .navbar-header {
@@ -536,12 +585,16 @@ button:focus {
   }
   .navbar-brand {
     position: absolute;
+
+
     padding: 15px;
     top: 0;
   }
   .navbar-brand img {
     width: 70%;
+    padding: 30px 0;
   }
+  
   #mobile-menu {
     display: none;
   }
@@ -607,8 +660,9 @@ button:focus {
   color: #fff;
 }
 .bg-gray{
-  background-color: #999;
+  background-color: rgb(240, 240, 240);
   color: #FFFFFF;
+  padding: 30px;
 }
 
 /* ==========================================================================
@@ -819,7 +873,8 @@ button:focus {
 }
 
 .list-unstyled li {
-  color: #d9534f;
+  color: #fffdfd;
+  font-weight: 300;
 }
 
 /* ==========================================================================
@@ -869,3 +924,64 @@ footer {
 .copyright p a:hover {
   color: #FF3939;
 }
+
+@media screen and (max-width: 480px) {
+  #hero-section .contents p {
+    font-size: 30px;
+    line-height: 48px;
+    color: #D41014;
+    letter-spacing: 1.0px;
+    font-weight: bold;
+    padding: 10px;
+}
+.btn-common {
+  background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  height: auto; 
+  text-align: center;
+  border-radius: 30px;
+}
+
+.btn {
+  font-size: 12px;
+  padding: 11px 40px;
+  border-radius: 30px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+}
+.controls .btn {
+  font-size: 12px;
+  padding: 7px 7px;
+}
+.item-boxes {
+  text-align: center;
+  margin-bottom: 15px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.card-text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 10px;
+}
+.bg-gray {
+  background-color: rgb(240, 240, 240);
+  color: #FFFFFF;
+  padding: 3px;
+}
+.contact-us h3 {
+  font-size: 20px;
+  text-align: center;
+}
+}
+
