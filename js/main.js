@@ -11,10 +11,7 @@
         }
     });
 
-    /* 
-   One Page Navigation & wow js
-   ========================================================================== */
-    //Initiat WOW JS
+
     new WOW().init();
 
     // one page navigation 
@@ -46,9 +43,15 @@
       allowParentLinks: true,
       duplicate: false,
       label: '',
-    });
-
-
+    })
+    $(document).on('click','.mobile-menu',function() {
+        if( $(e.target).is('a') && $(e.target).attr('class') !='.mobile-menu' ) {
+        $(this).collapse('hide');
+        }
+        });
+   
+    
+;
 /* 
    CounterUp
    ========================================================================== */

@@ -24,6 +24,12 @@ p {
   font-size: 15px;
   font-weight: 500;
   line-height: 36px;
+  padding: 38px 0;
+}
+.card-text-2{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 36px;
   padding: 38px;
 }
 
@@ -490,7 +496,7 @@ button:focus {
 }
 
 .top-nav-collapse .navbar-nav .nav-link.active {
-  color: #fff !important;
+  color: #D41014 !important;
 }
 
 .indigo {
@@ -560,6 +566,13 @@ button:focus {
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+   input[type=checkbox]:checked ~ #overlay-button span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+    opacity: 1;
+  }
+  input[type=checkbox]:checked ~ #overlay-button span:after {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
 }
 
 .navbar-toggler {
@@ -579,9 +592,11 @@ button:focus {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .navbar-header {
     width: 100%;
+    overflow-x: hidden;
+ 
   }
   .navbar-brand {
     position: absolute;
@@ -666,109 +681,55 @@ button:focus {
 }
 
 /* ==========================================================================
-  8. Portfolio Section
-   ========================================================================== */
-#portfolios .mix {
-  padding: 10px;
-}
-
-#portfolios .portfolio-item .shot-item {
-  margin: 0px;
-}
-
-#portfolio .mix {
-  display: none;
-}
-
-.controls {
-  text-align: center;
-  padding: 0px 0px 20px;
-}
-
-.controls .active {
-  color: #FF3939 !important;
-  border-color: #FF3939;
-  background: transparent;
-}
-
-.controls .btn {
-  text-transform: uppercase;
-  margin: 2px;
-}
-
-.controls:hover {
-  cursor: pointer;
-}
-
-.portfolio-img {
-  overflow: hidden;
-  display: block;
-  position: relative;
-}
-
-.portfolio-img img {
-  width: 100%;
-}
-
-.shot-item {
-  margin-right: 15px;
-  border-radius: 4px;
-  background: #fff;
-  position: relative;
-}
-
-.shot-item img {
-  width: 100%;
-}
-
-.shot-item .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.7);
-  top: 0;
-  left: 0;
-}
-
-.shot-item:hover .overlay {
-  opacity: 1;
-}
-
-.overlay .item-icon {
-  height: 48px;
-  width: 48px;
-  line-height: 48px;
-  color: #FF3939;
-  left: 50%;
-  margin-left: -24px;
-  margin-top: -24px;
-  top: 50%;
-  position: absolute;
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-  cursor: pointer;
-  text-align: center;
-  font-size: 20px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  border: 1px solid #FF3939;
-  border-radius: 50%;
-}
-
-.overlay .item-icon:hover {
-  background: #FF3939;
+11. service Section Style
+ ========================================================================== */
+ #service {
+  background-size: cover;
   color: #fff;
+  overflow: hidden;
+  position: relative;
 }
 
-.shot-item:hover .item-icon {
-  visibility: visible;
-  opacity: 1;
+.service-item {
+  text-align: center;
 }
 
+.service-item img {
+  width: 200px;
+  border: 3px solid #fff;
+  height: 200px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 13px 64px -31px rgba(0,0,0,1);
+-moz-box-shadow: 0px 13px 64px -31px rgba(0,0,0,1);
+box-shadow: 0px 13px 64px -31px rgba(0,0,0,1);
+
+}
+
+.service-item .service-text h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.service-item .service-text span {
+  font-size: 14px;
+  color: #999;
+}
+
+.service-item .service-text p {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 36px 10px 30px 10px;
+  margin: 0;
+  line-height: 30px;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  background: red;
+}
+
+.owl-theme .owl-controls {
+  margin-top: 20px;
+}
 /* ==========================================================================
 	9. values Table
 	========================================================================== */
@@ -847,7 +808,7 @@ button:focus {
   padding: 14px;
   border-color: #fff;
   border-radius: 0px;
-  color: #fff;
+  color: #343a40;
   background: #fff;
   font-size: 14px;
   -webkit-transition: all 0.3s;
