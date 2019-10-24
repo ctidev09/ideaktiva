@@ -303,6 +303,10 @@ button:focus {
   color: #fff;
   overflow: hidden;
   position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  image-resolution: 60px;
 }
 .cover {
   background-size: cover;
@@ -857,14 +861,7 @@ footer {
     font-weight: bold;
     padding: 10px;
 }
-#hero-section {
-  background: url(../img/slide2.png) no-repeat;
-  background-size: cover;
-  height: 100%;
-  color: #fff;
-  overflow: hidden;
-  position: relative;
-}
+
 .btn-common {
   background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
   position: relative;
