@@ -24,13 +24,13 @@ p {
   font-size: 15px;
   font-weight: 500;
   line-height: 36px;
-  padding: 38px 0;
+  padding: 28px 15px 0 15px;
 }
 .card-text-2{
   font-size: 15px;
   font-weight: 500;
   line-height: 36px;
-  padding: 38px;
+  padding: 0px;
 }
 
 
@@ -56,6 +56,8 @@ h2{
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
+  padding: 0 10px;
+  text-align: center;
 }
 
 ul {
@@ -598,7 +600,7 @@ button:focus {
 /* ==========================================================================
   5. Services section
    ========================================================================== */
-.item-boxes {
+   .item-boxes {
   text-align: center;
   padding: 0px 15px;
   margin-bottom: 15px;
@@ -667,6 +669,14 @@ button:focus {
   -webkit-box-shadow: 0px 13px 64px -31px rgba(0,0,0,1);
 -moz-box-shadow: 0px 13px 64px -31px rgba(0,0,0,1);
 box-shadow: 0px 13px 64px -31px rgba(0,0,0,1);
+
+}
+.picture-icon :hover{
+  font-size: 26px;
+  line-height: 60px;
+  color: #FF3939;
+  
+
 
 }
 
