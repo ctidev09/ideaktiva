@@ -18,7 +18,7 @@ html {
 p {
   font-size: 19px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 30px;
 }
 .card-text{
   font-size: 15px;
@@ -320,7 +320,7 @@ button:focus {
   opacity: 0.9;
 }
 
--------------------------------- */
+
 .cd-background-wrapper {
   background-color: #001426;
   position: relative;
@@ -551,12 +551,14 @@ button:focus {
 }
 
 
+
 @media screen and (max-width: 991px) {
   .navbar-header {
     width: 100%;
     overflow-x: hidden;
  
-  }
+  
+}
   .navbar-brand {
     position: absolute;
 
@@ -854,6 +856,14 @@ footer {
     letter-spacing: 1.0px;
     font-weight: bold;
     padding: 10px;
+}
+#hero-section {
+  background: url(../img/slide2.png) no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
 }
 .btn-common {
   background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);

@@ -3,7 +3,7 @@
 /* only small tablets */
 @media (min-width: 768px) and (max-width: 991px) {
   #hero-section .contents h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
   .item-boxes h4 {
     font-size: 18px;
@@ -50,6 +50,22 @@
   }
   #features .box-item .text h4 {
     font-size: 14px;
+  }
+  #hero-section .contents p {
+    font-size: 40px;
+    line-height: 48px;
+    color: #D41014;
+    letter-spacing: 1.0px;
+    font-weight: bold;
+    padding: 30 0px;
+  }
+  #hero-section {
+    background: url(../img/slide2.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
   }
   .controls {
     margin: 0px;
