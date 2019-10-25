@@ -1,67 +1,34 @@
+
 <?php
+$remitente = $_POST['email'];
+$destinatario = 'genteayudandoac@gmail.com'; // en esta línea va el mail del destinatario.
+$asunto = 'Consulta'; // acá se puede modificar el asunto del mail
+if (!$_POST)
+{
 
-$errorMSG = "";
-
-// NAME
-if (empty($_POST["name"])) {
-    $errorMSG = "El nombre es necesario";
-} else {
-    $name = $_POST["name"];
-}
-
-// EMAIL
-if (empty($_POST["email"])) {
-    $errorMSG .= "Email is required ";
-} else {
-    $email = $_POST["email"];
-}
-
-// MSG SUBJECT
-if (empty($_POST["msg_subject"])) {
-    $errorMSG .= "Subject is required ";
-} else {
-    $msg_subject = $_POST["msg_subject"];
-}
-
-
-// MESSAGE
-if (empty($_POST["message"])) {
-    $errorMSG .= "Message is required ";
-} else {
-    $message = $_POST["message"];
-}
-
-
-$EmailTo = "urimelvin@gmail.com";
-$Subject = "New Message Received";
-
-// prepare email body text
-$Body = "";
-$Body .= "Name: ";
-$Body .= $name;
-$Body .= "\n";
-$Body .= "Email: ";
-$Body .= $email;
-$Body .= "\n";
-$Body .= "Subject: ";
-$Body .= $msg_subject;
-$Body .= "\n";
-$Body .= "Message: ";
-$Body .= $message;
-$Body .= "\n";
-
-// send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
-
-// redirect to success page
-if ($success && $errorMSG == ""){
-   echo "success";
+    function val_dato($dato){
+        $dato = trim($dato);        //Eliminar espacios a los lados
+        $dato = strip_tags($dato);//Eliminar etiquetas HTML
+        return $dato;
+      }
+      
 }else{
-    if($errorMSG == ""){
-        echo "Something went wrong :(";
-    } else {
-        echo $errorMSG;
-    }
-}
+	 
+    $cuerpo = "Nombre y apellido: " . $_POST["name"] . "\r\n"; 
+    $cuerpo .= "Email: " . $_POST["email"] . "\r\n";
+	$cuerpo .= "Consulta: " . $_POST["message"] . "\r\n";
+	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
+	// Si se agrega un campo al formulario, hay que agregarlo acá.
 
+    $headers  = "MIME-Version: 1.0\n";
+    $headers .= "Content-type: text/plain; charset=utf-8\n";
+    $headers .= "X-Priority: 3\n";
+    $headers .= "X-MSMail-Priority: Normal\n";
+    $headers .= "X-Mailer: php\n";
+    $headers .= "From: \"".$_POST['nombre']." ".$_POST['apellido']."\" <".$remitente.">\n";
+
+    mail($destinatario, $asunto, $cuerpo, $headers);
+    
+    include 'confirm.html'; //se debe crear un html que confirma el envío
+}
 ?>
